@@ -19,12 +19,12 @@ public class Game
     public Game()
     {
         _board = new GameBoard();
-        _pacman = new Pacman(5, 9); // Start in center-ish position
+        _pacman = new Pacman(9, 1); // Start in bottom left area, away from ghosts
         _ghosts = new List<Ghost>
         {
-            new Ghost(5, 8),
-            new Ghost(5, 10),
-            new Ghost(4, 9)
+            new Ghost(5, 8),  // Center-left ghost
+            new Ghost(5, 10), // Center-right ghost
+            new Ghost(1, 9)   // Top center ghost
         };
         
         // Place entities on board
